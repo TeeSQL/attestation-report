@@ -1,0 +1,38 @@
+{
+  "name": "attestation-report",
+  "version": "0.1.0",
+  "description": "Provider-agnostic TEE attestation report types",
+  "license": "Apache-2.0",
+  "author": "TeeSQL",
+  "homepage": "https://github.com/TeeSQL/attestation-report",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TeeSQL/attestation-report.git"
+  },
+  "keywords": ["attestation", "tee", "tdx", "confidential-computing", "ra-tls"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": { "node": ">=18.0.0" }
+}
